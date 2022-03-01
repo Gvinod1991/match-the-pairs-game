@@ -7,13 +7,12 @@ import {
 } from './utils/multiIndexFinder';
 import { shuffle } from './utils/suffle';
 
-const eightEmojiSet=['🐶','🦦','🤩','🏳️‍🌈','🦖','🎉','🐹','🙀'];
-const emojiSet2=eightEmojiSet;
-const mergedEmojis=eightEmojiSet.concat(emojiSet2);
-const shuffleEmojis= shuffle(mergedEmojis);
-const emojiSet = shuffleEmojis.map(emoji=>({emoji,flipped:false,matched:false}));
-
 function App() {
+  const eightEmojiSet=['🐶','🦦','🤩','🏳️‍🌈','🦖','🎉','🐹','🙀'];
+  const emojiSet2=eightEmojiSet;
+  const mergedEmojis=eightEmojiSet.concat(emojiSet2);
+  const shuffleEmojis= shuffle(mergedEmojis);
+  const emojiSet = shuffleEmojis.map(emoji=>({emoji,flipped:false,matched:false}));
   const [emojis, setEmojis] = useState(emojiSet);
   const [movesCount, setMovesCount] = useState<number>(0);
   const [matchCount, setMatchCount] = useState<number>(0);
