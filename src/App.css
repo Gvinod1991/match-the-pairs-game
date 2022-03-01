@@ -1,5 +1,4 @@
 .container {
-  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,6 +6,13 @@
   padding: 1rem;
   background-color: #fff;
   border-radius: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 .card {
   width: 130px;
@@ -29,9 +35,6 @@
 .card-flip {
   transform: rotateY(180deg);
 }
-.card-unflip {
-  transform: rotateY(-180deg);
-}
 .card-front,
 .card-back {
   position: absolute;
@@ -47,6 +50,7 @@
 }
 .card-front img {
   width: 85px;
+  opacity: 0.6;
 }
 .card-back {
   background-color: #c9eeea;
@@ -75,12 +79,18 @@
   margin: 0 0.5rem 0.5rem 0;
 }
 .reset-btn {
-  background-color: blue;
+  background-color: #847fd7;
   padding: 0.5rem;
   color: #fff;
   border-radius: 0.4rem;
-  border-color: blue;
+  border-color: #847fd7;
   cursor: pointer;
   margin-top: 0.5rem;
   font-size: 1rem;
+}
+.logo {
+  width: 85px;
+}
+.title {
+  color: #847fd7;
 }

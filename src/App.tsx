@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Logo from './logo.svg';
+import Logo from './logo.png';
 import './App.css';
 import {
   multiIndexFinder,
@@ -86,7 +86,10 @@ function App() {
   return (
     <>
       <div className="container">
-        <h2>Match The Pairs?</h2>
+        <div className='row'>
+          <img src={Logo} className="logo" alt="logo"/>
+          <h2 className="title">Match The Pairs?</h2>
+        </div>
         <div className="row">
           <div className="score-card matches">
             <p>Pairs Matched</p>
